@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href ="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+
+<style type="text/css">
+
+</style>
+  </head>
+  <body>
+    <h1 class="text-center">Form</h1>
+
+      <div class="container-fluid ">
+
+        <div class="row justify-content-md-center jumbotron">
+          <form id="form">
+            <div class="form-group">
+              <input type="text" name="name" id="name">
+            </div>
+            <div class="form-group">
+              <input type="text" name="sobrenome" id="sobreNome">
+            </div>
+            <button type="submit">Ok</button>
+          </form>
+        </div>
+        <div class="row justify-content-center jumbotron">
+          <form action="">
+            <div class="form-group">
+              <select id="pais">
+                <option value="brasil">Brasil</option>
+                <option value="estados unidos">Estados Unidos</option>
+                <option value="franca">França</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input class="input" type="checkbox" value="blue" name="blue">blue <br>
+              <input type="checkbox" value="yellow" name="yellow">yellow
+            </div>
+            <div class="form-group">
+            </div>
+          </form>
+
+          <div class="form-group">
+              <input type="submit" name=""  id="btn" value="script">
+          </div>
+
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div id="retorno"></div>
+        </div>
+
+
+        <h6></h6>
+      </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+      form = document.getElementsByTagName("form");
+
+      input = document.getElementsByTagName("input");
+
+      btn = document.getElementById("btn");
+
+      retorno = document.getElementById("retorno");
+
+      retorno.innerHTML = form.length;
+
+      retorno.innerHTML = input.length;
+
+      input[1].value = "sefwefwef";
+
+      input[1].reset;
+
+
+      select = document.getElementById("pais");
+
+      select[2].selected = true;
+
+      select[0].disabled = true;
+
+
+
+      retorno.innerHTML = select.options[2].text;
+
+      btn.onclick = function(){
+
+        //console.log(input.length);
+        for (var i = 0; i < input.length; i++) {
+
+            if (input[i].type = "checkbox") {
+              console.log("1");
+            }
+            //console.log(input[i].type);
+
+        }
+
+        //console.log((input.type="checkbox").length);
+
+
+        //console.log(x.length);
+        /*if (  input[2].checked) {
+
+          input[2].checked = false;
+        }else{
+            input[2].checked = true;
+        }*/
+
+
+        //input[1].value;
+
+        // /console.log(input[2].value);
+      };
+
+
+
+
+
+    </script>
+  </body>
+</html>
