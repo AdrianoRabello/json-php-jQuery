@@ -21,16 +21,11 @@
 
         <div class="row justify-content-md-center ">
 
-          <form id="form">
-            <select name="" id="equipamentType">
-              <option value="choose">Selecione</option>
-              <option value="cameras">cameras</option>
-              <option value="projectors">projectors</option>
-            </select><br><br>
-            <select name="" id="model">
-              <option value="">Select your equipament</option>
-            </select>
-          </form>
+        <ul>
+          <li>teste </li>
+          <li>teste </li>
+          <li>teste</li>
+        </ul>
         </div>
 
 
@@ -51,54 +46,16 @@
 
       (function(){
 
-        var cameras = {
-          sansung: " teste san",
-          yashica: "teste yashika"
-        };
+        $("li").on('click',function(){
+          $(this).animate({
+            opacity: 1.0,
+            paddingLeft: '+=50',
+            background: '=black'
+          },5000,function(){
 
-        var projectors = {
-          kodac: " teste kodac",
-          film: "teste film"
-        };
-
-        //var all      = document.getElementById("all");
-        var type        = document.getElementById("equipamentType");
-        var model       = document.getElementById("model");
-
-
-
-
-
-        type.addEventListener('change',function(e){
-
-          var target = e.target || e.srcElement;
-          var models = getModels(this.value);
-
-          if (this.value == "choose") {
-            model.innerHTML = "<option>select a type first</option>";
-            return;
-          }
-
-           var options = "<option> select a type </option>";
-          for(var key in models){
-            options += "<option value="+key+">"+models[key]+"</option>";
-          }
-
-          model.innerHTML = options ;
-
-          //console.log(models);
-
-
-
+              $(this).css('background','black');
+          });
         });
-
-        function getModels(type){
-          if (type == "cameras") {
-            return cameras;
-          }else{
-            return projectors;
-          }
-        }
 
       }());
 
